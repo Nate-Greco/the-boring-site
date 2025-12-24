@@ -370,7 +370,7 @@ export default function Home() {
             <FAQItem 
               question="Is Boring Notch resource-intensive?"
               answer="Boring Notch is designed to be extremely lightweight and efficient. However, as with any application, its impact on system resources may vary depending on your Mac's specifications and the features you use."
-            />
+            /> 
           </motion.div>
         </div>
       </section>
