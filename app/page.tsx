@@ -7,6 +7,8 @@ import { useGitHubStats, formatNumber } from "./hooks/use-github-stats";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, memo } from "react";
 import Navbar from "./navbar";
+import logo from "../public/logo.png";
+import Image from 'next/image';
 
 const GitHubLogo = memo(({ size = 18, className = "", ...props }: { size?: number; className?: string }) => (
   <svg
@@ -489,7 +491,13 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-3">
-            <img src="../logo.png" width={40} style={{paddingRight: 5}}></img>
+              <Image
+                src={logo}
+                width={40}
+                style={{paddingRight: 5}}
+                alt="Notch Logo"
+                >
+              </Image>
               <span className="font-semibold text-[#F5F0EB]">Boring Notch</span>
             </div>
             

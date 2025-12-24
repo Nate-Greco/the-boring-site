@@ -4,6 +4,8 @@ import { Download, Heart, Music, Calendar, Zap, ArrowRight, Star, Battery, Camer
 import { NotchSimulator } from "./notch-simulator";
 import { useGitHubStats, formatNumber } from "./hooks/use-github-stats";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
+import logo from "../public/logo.png";
 
 const GitHubLogo = memo(({ size = 18, className = "", ...props }: { size?: number; className?: string }) => (
     <svg
@@ -38,7 +40,13 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.35 }}
           >
-            <img src="../logo.png" width={40} style={{paddingRight: 5}}></img>
+            <Image
+                src={logo}
+                width={40}
+                style={{paddingRight: 5}}
+                alt="Notch Logo"
+                >
+              </Image>
             <p className="font-bold text-[#F5F0EB] tracking-tight text-xl">Boring Notch</p>
           </motion.div>
           <nav className="hidden md:flex items-center gap-2 text-sm">
